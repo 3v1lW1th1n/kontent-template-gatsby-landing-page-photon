@@ -7,17 +7,15 @@ const videoSection = ({ system, elements }) => (
         <header className="major">
           <h2>{elements.primary_text.value}</h2>
         </header>
-        <p>{elements.primary_text.value}</p>
+        <p>{elements.secondary_text.value}</p>
       </div>
       <div className="col-6">
-        <span className="fit">
           <iframe
             width="100%"
-            height="315"
+            height="450"
             title={elements.primary_text.value}
             src={`https://www.youtube.com/embed/${elements.youtube_id.value}`}
           />
-        </span>
       </div>
     </div>
   </section>

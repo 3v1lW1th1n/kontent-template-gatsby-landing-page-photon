@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const kontentItemTypeIdentifier = `KontentItem`;
 
-// You can delete this file if you're not using it
+
+exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
+  if (node &&node.intenal && node.internal.type && node.internal.type.startsWith && node.internal.type.startsWith(kontentItemTypeIdentifier)) {
+
+    createNodeField({
+      node,
+      name: `test_field`,
+      value: `test value`
+    });
+  }
+};
