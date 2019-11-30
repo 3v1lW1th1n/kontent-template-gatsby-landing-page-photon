@@ -10,12 +10,13 @@ class Homepage extends React.Component {
     return (
       <StaticQuery
         query={graphql`
-         {
+{
   kontentItemSectionsPage(system: {codename: {eq: "home_page"}}) {
     elements {
       sections {
         linked_items {
           ... on Node {
+            __typename
             ... on KontentItemHeaderSection {
               elements {
                 primary_text {
