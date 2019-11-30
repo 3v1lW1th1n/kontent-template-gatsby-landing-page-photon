@@ -12,9 +12,6 @@ export const query = graphql`
         date___time {
           value
         }
-        gatsby_preview__gatsby_preview_watcher {
-          value
-        }
         number {
           value
         }
